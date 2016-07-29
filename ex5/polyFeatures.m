@@ -15,9 +15,16 @@ X_poly = zeros(numel(X), p);
 %
 % 
 
-
-
-
+%
+% first position is simply X
+%
+X_poly(:,1) = X;
+for i=2:p
+%
+% compute 2 through p with an additive multiplication of the previous cell
+%
+  X_poly(:,i) = X.*X_poly(:,i-1);
+end
 
 
 % =========================================================================
