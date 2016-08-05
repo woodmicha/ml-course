@@ -48,7 +48,11 @@ x = zeros(n, 1);
 %
 %
 
-
+%
+% shorter to pop through array of word_indices than it is to loop x
+for i=1:length(word_indices)
+    x(word_indices(i)) = 1; % assign x sub word_indices[i]
+end
 
 
 

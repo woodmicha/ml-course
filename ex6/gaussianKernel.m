@@ -16,10 +16,12 @@ sim = 0;
 %
 %
 
-
-
-
-
+%
+% a version that is easier to follow
+%
+XandY = x1-x2;
+NormXandY = XandY'*XandY;
+sim = exp(-NormXandY/(2*sigma^2));
 
 % =============================================================
     
